@@ -6,7 +6,7 @@ updateQuote();
 async function updateQuote() {
     // Fetch a random quote from the Quotable API
     console.log("Fetching quote. Hang on");
-    const response = await fetch("https://api.quotable.io/random");
+    const response = await fetch("https://api.quotable.io/random?maxLength=90");
     const data = await response.json();
     if (response.ok) {
         // Update DOM elements
